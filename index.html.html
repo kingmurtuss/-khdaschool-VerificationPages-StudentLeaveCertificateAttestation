@@ -1,0 +1,423 @@
+<html xmlns="http://www.w3.org/1999/xhtml" class="">
+
+<head id="Head1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="robots" content="noindex">
+    <title>
+        QR code generator
+    </title>
+    <style type="text/css">
+    </style>
+    <link href="../Styles/styles_local.css" rel="stylesheet">
+    <script type="text/javascript">
+        function close_window() {
+            if (confirm("Close Window?")) {
+                close();
+            }
+        }
+
+    </script>
+    <style type="text/css">
+        @charset "utf-8";
+
+        .mainborder {
+            border: 1px solid #999999;
+        }
+
+        .copyright {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 9pt;
+            font-weight: normal;
+            color: #999;
+            text-decoration: none;
+        }
+
+        .labels {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 10pt;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .text {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 10pt;
+            font-weight: normal;
+            color: #b5121b;
+            text-decoration: none;
+        }
+
+        .certificateText1 {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 11pt;
+            font-weight: normal;
+            color: #333333;
+            text-decoration: none;
+        }
+
+        .certificateText2 {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 11pt;
+            font-weight: normal;
+            color: #b5121b;
+            text-decoration: underline;
+        }
+
+        .authenticText {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 12pt;
+            font-weight: bold;
+            color: #090;
+            text-decoration: none;
+            background-color: #E7F1D1;
+            border: 1px solid #090;
+        }
+
+        .gridText {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 10pt;
+            font-weight: normal;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .columnHeading {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 10pt;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .fields {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 10pt;
+            font-weight: normal;
+            color: #333333;
+            margin: 1px;
+            padding: 1px;
+            height: 23px;
+            width: 450px;
+            border: 1px solid #999999;
+        }
+
+        .dropdowns {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 10pt;
+            font-weight: normal;
+            color: #333333;
+            margin: 1px;
+            padding: 1px;
+            height: 30px;
+            width: 455px;
+            border: 1px solid #999999;
+        }
+
+        .heading {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 11pt;
+            font-weight: bold;
+            color: #b5121b;
+            text-decoration: none;
+        }
+
+        .messageSuccess {
+            font-family: Tahoma;
+            font-size: 8.6pt;
+            font-weight: normal;
+            text-decoration: none;
+            background-color: #dff2bf;
+            height: 25px;
+            border: 1px solid #4f8a10;
+            color: #4f8a10;
+            line-height: 25px;
+        }
+
+        .messageWarning {
+            font-family: Tahoma;
+            font-size: 8.6pt;
+            font-weight: normal;
+            text-decoration: none;
+            background-color: #feefb3;
+            height: 25px;
+            border: 1px solid #9f6000;
+            color: #9f6000;
+            line-height: 25px;
+        }
+
+        .messageError {
+            font-family: Tahoma;
+            font-size: 8.6pt;
+            font-weight: normal;
+            text-decoration: none;
+            background-color: #ffbaba;
+            height: 25px;
+            border: 1px solid #d8000c;
+            color: #e90000;
+            line-height: 25px;
+        }
+
+        .messageLabel {
+            font-family: Tahoma;
+            font-size: 8.6pt;
+            font-weight: normal;
+            color: #000000;
+            text-decoration: none;
+            line-height: 18px;
+        }
+
+
+        .validationSummary {
+            font-family: Tahoma;
+            font-weight: normal;
+            text-decoration: none;
+            color: #000000;
+            text-indent: 0px;
+            line-height: 18px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .button {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 10pt;
+            font-weight: normal;
+            color: #333333;
+            height: 27px;
+            width: auto;
+            text-decoration: none;
+            border-top-width: 1px;
+            border-right-width: 1px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+            background-image: url(images/buttonBg.png);
+            margin: 1px;
+            padding: 1px;
+            border-top-style: solid;
+            border-right-style: solid;
+            border-bottom-style: solid;
+            border-left-style: solid;
+        }
+
+        .heading {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 11pt;
+            font-weight: bold;
+            color: #b5121b;
+            text-decoration: none;
+        }
+    </style>
+    <link href="../App_Themes/Default/Calendar.khda.css" type="text/css" rel="stylesheet">
+    <link href="../App_Themes/Default/ComboBox.khda.css" type="text/css" rel="stylesheet">
+    <link href="../App_Themes/Default/Default.css" type="text/css" rel="stylesheet">
+    <link href="../App_Themes/Default/Grid.khda.css" type="text/css" rel="stylesheet">
+    <link href="../App_Themes/Default/Input.khda.css" type="text/css" rel="stylesheet">
+    <link href="../App_Themes/Default/jquery-ui-1.10.3.custom.min.css" type="text/css" rel="stylesheet">
+    <link href="../App_Themes/Default/Menu.khda.css" type="text/css" rel="stylesheet">
+    <link href="../App_Themes/Default/Notification.khda.css" type="text/css" rel="stylesheet">
+    <link href="../App_Themes/Default/RadEditor.khda.custom.css" type="text/css" rel="stylesheet">
+    <link href="../App_Themes/Default/Window.khda.css" type="text/css" rel="stylesheet">
+    <style>
+        /* MyComponent.module.css */
+
+        .kw-fixedContainer {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 50;
+            background-color: white;
+            padding: 1.25rem;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+            max-height: 70vh;
+            max-width: 70vw;
+            border-radius: 0.375rem;
+        }
+
+        .kw-flexContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .kw-button {
+            position: relative;
+            background-color: #3498db;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+
+        .kw-button:hover {
+            background-color: #2980b9;
+        }
+
+        .kw-codeButton {
+            position: absolute;
+            right: 1rem;
+            top: 0.5rem;
+        }
+
+        .kw-pre {
+            white-space: pre-wrap;
+            overflow-y: scroll;
+            flex: 1;
+        }
+
+        /* Add more styles as needed */
+    </style>
+</head>
+
+<body cz-shortcut-listen="true">
+    <form name="frm1" method="post"
+        action="./StudentLeaveCertificateAttestation.aspx?id=BKpk5bKpORqVlL5qb5DHMN7VyM1n4xq01%2fBDt%40p%40E0Yq7KGnmtA3eb2C89ViRYbgXgG0grZ%2fOb0Kg7ikcDzcPZ0HfSGu%2fmFM8XJy00%40p%40ytsA0b%2fZXPazbcKh%2fgTIKnBj7dz1bRqjZn7PP%40p%401J0kB69hmfw%3d%3d"
+        id="frm1">
+        <div>
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                value="/wEPDwULLTEwOTI0OTI4MjUPZBYCAgMPZBYEAgMPFgIeBFRleHQF1ALYqtmFINin2YTYqtij2YPYryDZhdmGINi12YTYp9it2YrYqSDYp9mE2LTZh9in2K/YqSDYp9mE2LXYp9iv2LHYqSDZhDxzcGFuIGNsYXNzPSdjZXJ0aWZpY2F0ZVRleHQyJz7YrdmF2K/ZhyDZhdi12LfZgdmJINmF2LXYt9mB2Ykg2YPYp9iv2KfYqNix2KfYqtin2YPYp9iqPC9zcGFuPiDZhdmGIDxzcGFuIGNsYXNzPSdjZXJ0aWZpY2F0ZVRleHQyJz7Yp9mE2YXYr9ix2LPYqSDYp9mE2YfZhtiv2YrYqSDYp9mE2YbZhdmI2LDYrNmK2Kkg2KfZhNis2K/Zitiv2Kk8L3NwYW4+INiq2KfYsdmK2K4g2KfZhNiq2LHZgyAgPHNwYW4gY2xhc3M9J2NlcnRpZmljYXRlVGV4dDInPjI5LzAzLzIwMjE8L3NwYW4+ZAIFDxYCHwAFjAJUaGlzIGNlcnRpZmljYXRlIGlzIDxzdHJvbmc+YXV0aGVudGljPC9zdHJvbmc+IGFuZCB3YXMgaXNzdWVkIHRvIDxzcGFuIGNsYXNzPSdjZXJ0aWZpY2F0ZVRleHQyJz5IQU1EQSBNVVNUSEFGQSBNVVNUSEFGQSBLQURBUFJBVEhBS0FUSDwvc3Bhbj4gYnkgPHNwYW4gY2xhc3M9J2NlcnRpZmljYXRlVGV4dDInPk5ldyBJbmRpYW4gTW9kZWwgU2Nob29sPC9zcGFuPiBsZWF2aW5nIGRhdGUgPHNwYW4gY2xhc3M9J2NlcnRpZmljYXRlVGV4dDInPjI5LzAzLzIwMjE8L3NwYW4+ZGShSwI4L+UQN7kCT0sdKrpzCmg4/w==">
+        </div>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms['frm1'];
+            if (!theForm) {
+                theForm = document.frm1;
+            }
+            function __doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTARGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+            //]]>
+        </script>
+
+
+        <script
+            src="/KHDASchool/WebResource.axd?d=Gpc9HEkbpPaxx6upIMayZ0CY_7HIqIVaHA_orfpWLs_qDl4-YUtB3qJtBKn5W46QTENtSNKqOujqsPsQmtLpttQdG2w1&amp;t=638369210615952268"
+            type="text/javascript"></script>
+
+
+        <script
+            src="/KHDASchool/ScriptResource.axd?d=aPPIboOeeR1jbU7kjIXbbIDtB5VWQoA4mBRX2LkKRZ83uBgDg8Q5qDCqSCL9gPpCWoupOkEitPtCtj6f6OjFl4pRaJ3fmGknbrqiJYvCY_Tdpcl6H9aqrr8LJiDWLSEuHrzb9jLHJokMCmm9LOejfhujsN3Z7cfGMZM_roPj4m-U-r-q0&amp;t=722fe453"
+            type="text/javascript"></script>
+        <script type="text/javascript">
+            //<![CDATA[
+            if (typeof (Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+            //]]>
+        </script>
+
+        <script
+            src="/KHDASchool/ScriptResource.axd?d=tbjQtD9iqa_Yfk7HDSorOkD6DoU4i2lHWOLX8epEl9Y1JE2r_UaDT35t_g_b-A1ilvHHrxtmVO2t-adEnFGUXoR1GNbpc4nL64W_eLrhxYvh595b_T7ZfsB67UuUP6XpFHlQXJs8VL-1N9k-NfR_pRu2D0QmsSLbQ-RKWBsqkFxQUgfolFrswFYPifHfP4wHpgUQ0w2&amp;t=722fe453"
+            type="text/javascript"></script>
+        <div>
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="0AFB428C">
+        </div>
+        <script type="text/javascript">
+            //<![CDATA[
+            Sys.WebForms.PageRequestManager._initialize('scrptManager', 'frm1', [], [], [], 90, '');
+            //]]>
+        </script>
+
+        <table width="990" border="0" align="center" cellpadding="0" cellspacing="0" class="mainborder">
+            <tbody>
+                <tr>
+                    <td bgcolor="#FFFFFF">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="https://i.ibb.co/Fgpg0LB/govtLogo.jpg" width="124" height="54">
+                                    </td>
+                                    <td height="80" align="right">
+                                        <img src="https://i.ibb.co/3RZ8MQz/govtLogo.jpg" width="324" height="54">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="15" bgcolor="#b5121b"></td>
+                </tr>
+                <tr>
+                    <td height="500" valign="top" bgcolor="#FFFFFF" style="background-image: url(../images/QRBg.jpg)">
+                        <br>
+                        <table width="90%" border="0" align="center" cellpadding="12" cellspacing="0" class="border">
+                            <tbody>
+                                <tr>
+                                    <td align="center" bgcolor="#F4F4F4" class="certificateText1">
+                                        <table width="100%" border="0" cellpadding="8" cellspacing="0"
+                                            class="authenticText">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center">Authentic certificate / شهادة معتمدة </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#F4F4F4" class="certificateText1" dir="rtl">
+                                        تم التأكد من صلاحية الشهادة الصادرة ل<span class="certificateText2"> أريبا سلمان </span> من <span class="certificateText2">المدرسة الهندية
+                                            النموذجية الجديدة</span> تاريخ الترك <span
+                                            class="certificateText2">29/05/2024</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#F4F4F4" class="certificateText1">
+                                        This certificate is <strong>authentic</strong> and was issued to <span
+                                            class="certificateText2">AREEBA SALMAN</span> by
+                                        <span class="certificateText2">New Indian Model School</span> leaving date <span
+                                            class="certificateText2">29/05/2024</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table width="90%" border="0" cellspacing="0" cellpadding="12" align="center">
+                            <tbody>
+                                <tr>
+                                    <td align="center">
+                                        <span id="lblMsgGrdError" class="redMessages"></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="12">
+                            <tbody>
+                                <tr>
+                                    <td align="center">
+                                        <input name="button4" type="submit" id="button4"
+                                            onclick="close_window(); return false;" value="Close window"
+                                            style="display: none">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table width="990" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td height="40" align="center" class="copyright">Copyright 2013 KHDA | All rights reserved&gt;
+                        &gt;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+
+</body>
+
+</html>
